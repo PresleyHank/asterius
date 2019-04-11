@@ -801,7 +801,6 @@ scheduleWaitThreadFunction BuiltinsOptions {} =
                         break' sched_block_lbl Nothing))
               ]
             , emit $ emitErrorMessage [] IllegalThreadReturnCode)
-    callImport "__asterius_gcRootTSO" [convertUInt64ToFloat64 t]
 
 createThreadFunction _ =
   runEDSL [I64] $ do
